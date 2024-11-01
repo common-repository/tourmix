@@ -1,0 +1,30 @@
+#tourmix-cod-order-dialog-inputs-frame {
+    margin-bottom: 16px;
+
+    .cod_orders_table {
+        border: 1px solid #c3c4c7;
+        border-radius: 10px;
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+
+        tr:nth-child(even) {
+            background-color: #f6f7f7;
+        }
+
+        th {
+            border-bottom: 1px solid #c3c4c7;
+            font-weight: 400;
+            color: #2c3338;
+            padding: 8px 8px;
+        }
+
+        td {
+            padding: 8px 8px;
+        }
+
+        .invoice-number-inputs {
+            width: -webkit-fill-available;
+        }
+    }
+}

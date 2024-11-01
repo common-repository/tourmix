@@ -1,0 +1,306 @@
+/**
+ * @since      1.1.2
+ * @package    Tourmix
+ * @subpackage Tourmix/css
+ * @author     Tourmix<info@tourmix.delivery>
+ */
+
+#tourmix-delivery-orders-header {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: white;
+    padding: 0 40px;
+    height: 60px;
+    position: sticky;
+    top: 32px;
+    z-index: 2;
+
+    img {
+        width: 120px;
+        margin-right: 10px;
+    }
+
+    h1 {
+        font-weight: 500;
+        font-size: 14px;
+        color: #49977d;
+    }
+}
+
+.scrolled {
+    box-shadow: 0 8px 16px 0 rgb(85 93 102 / 30%);
+}
+
+
+
+#wpcontent {
+    padding: 0 !important;
+}
+
+.tourmix-delivery-api-token-form-container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 1200px) {
+    .tourmix-delivery-api-token-form-container {
+        flex-direction: column;
+    }
+}
+
+.tourmix-delivery-orders-container {
+    margin: 60px 20px 40px 20px;
+
+    #api-token-form {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        input[type=text] {
+            width: 350px;
+            height: 30px;
+            box-sizing: border-box;
+            display: inline-block;
+        }
+
+        input[type=submit] {
+            padding: 0px 15px;
+            height: 30px;
+            box-sizing: border-box;
+            border-radius: 4px;
+            border: 1px solid #8c8f94;
+            background-color: #fff;
+            color: #2c3338;
+            cursor: pointer;
+            transition: 0.2s;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    #tourmix-orders-count {
+        margin-bottom: 15px;
+        margin-left: -2.5px;
+
+        .tourmix-orders-count-title {
+            font-weight: 600;
+            text-decoration: none;
+            color: inherit;
+            margin: 5px;
+        }
+
+        .tourmix-orders-count-inactive {
+            color: #135e96;
+            font-weight: initial;
+        }
+    }
+
+    .handle-multievent {
+        margin-bottom: 10px;
+
+        .tourmix-multi-action-button {
+            background: #f6f7f7;
+            border: 1px solid #2271b1;
+            padding: 4px 8px;
+            border-radius: 5px;
+            color: #2271b1;
+            cursor: pointer;
+            vertical-align: top;
+
+            &:hover {
+                background: #f0f0f1;
+            }
+        }
+    }
+
+    td {
+        vertical-align: inherit;
+    }
+
+    .tourmix-transfer-button {
+        background: none;
+        border: 1px solid #2271b1;
+        padding: 4px 8px;
+        border-radius: 5px;
+        color: #2271b1;
+        cursor: pointer;
+
+        &:hover {
+            background: #f0f0f1;
+        }
+    }
+
+    .method {
+        display: block;
+        color: #999;
+    }
+
+    .tourmix-table {
+        .tourmix-order-cb {
+            margin-left: 8px;
+        }
+    }
+
+    .handle-pagination {
+        margin: 10px -5px 0px auto;
+        width: fit-content;
+
+        .pagination-button {
+            display: inline-block;
+            min-width: 30px;
+            min-height: 30px;
+            box-sizing: border-box;
+            border: 1px solid #2271b1;
+            font-size: 20px;
+            text-align: center;
+            padding: 2px;
+            text-decoration: none;
+            margin: 5px;
+        }
+
+        .active-pagination {
+            background-color: #f6f7f7;
+        }
+
+        .inactive-pagination {
+            color: #a7aaad;
+            border-color: #dcdcde;
+        }
+
+        .pagination-page-number {
+            padding: 10px;
+        }
+    }
+}
+
+.tourmix-primary-button {
+    background: none;
+    border: 1px solid #2271b1;
+    padding: 4px 8px;
+    border-radius: 5px;
+    color: #2271b1;
+    cursor: pointer;
+
+    &:hover {
+        background: #f0f0f1;
+    }
+}
+
+#loader-container {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+
+    .loader {
+        border: 8px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 8px solid #3498db;
+        width: 60px;
+        height: 60px;
+        animation: spin 1s linear infinite;
+        margin-left: 160px;
+    }
+
+    @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+    }
+      
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+}
+
+.torumix-no-orders {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        max-width: 200px;
+        margin-bottom: 25px;
+        margin-top: 100px;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .loader {
+        margin-left: 36px !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #tourmix-delivery-orders-header {
+        position: initial;
+    }
+
+    .tourmix-table {
+        thead {
+            display: none;
+        }
+
+        tr {
+            display: block;
+            padding: 15px;
+
+            .tourmix_td_cb {
+                display: inline-block;
+                padding-right: 0px;
+
+                .tourmix-order-cb {
+                    margin-left: 0px;
+                }
+            }
+
+            .tourmix_td_name {
+                display: inline-block;
+            }
+
+            .tourmix_td_date {
+                display: block;
+            }
+
+            .tourmix_td_payment {
+                display: block;
+            }
+
+            .tourmix_td_shipping {
+                display: block;
+            }
+
+            .tourmix_td_total {
+                display: block;
+            }
+            
+            .tourmix_td_bt {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        .tourmix-order-cb {
+            margin-left: 8px;
+        }
+    }
+
+    .loader {
+        margin-left: 0px !important;
+    }
+}

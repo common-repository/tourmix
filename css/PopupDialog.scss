@@ -1,0 +1,167 @@
+/**
+* The basic design of all the dialogs
+* The bottom of this file contains specific designs for some dialogs
+*/
+.tourmix-dialog-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 14px;
+    z-index: 999999;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 40%);
+    backdrop-filter: blur(5px);
+}
+
+.tourmix-dialog {
+    background-color: white;
+    width: 70%;
+    padding: 25px;
+    max-width: 600px;
+    position: relative;
+    border-radius: 20px;
+    margin: 60px auto;
+    overflow: hidden;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .tourmix-dialog-close-button {
+        position: absolute;
+        right: 25px;
+        top: 25px;
+        font-size: 1.5rem;
+        color: #d63638;
+        transition: scale 0.1s;
+        cursor: pointer;
+
+        &:hover {
+            scale: 1.2;
+        }
+    }
+
+    .tourmix-dialog-title {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 25px;
+    }
+
+    .tourmix-error-msg {
+        margin-top: 8px;
+        font-weight: 500;
+        color: red;
+        margin-bottom: 16px;
+    }
+}
+
+.tourmix-dialog-inputs-frame {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid rgb(209, 213, 219);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0px 2px 5px 0px rgb(209 213 219);
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+
+    legend {
+        font-weight: 500;
+    }
+
+    .tourmix-dialog-data-container {
+        height: 198px;
+        overflow-y: auto;
+        flex-basis: 100%;
+        margin-top: 20px;
+        border: 1px solid black;
+        border-radius: 15px;
+
+        .tourmix-dialog-data {
+            padding: 15px;
+            border-bottom: 1px solid black;
+            cursor: pointer;
+            display: block;
+            text-decoration: none;
+            color: inherit;
+
+            &:hover {
+                background-color: rgb(249, 250, 251);
+            }
+        }
+    }
+}
+
+.tourmix-dialog-message {
+    width: 100%;
+    text-align: inherit;
+    margin-bottom: 15px;
+}
+
+.tourmix-dialog-search-bar {
+    flex-basis: 100%;
+
+    input {
+        width: 100%;
+        padding: 0 8px;
+        line-height: 2;
+        min-height: 30px;
+        border-radius: 6px;
+        border: 1px solid #8c8f94;
+        background-color: #fff;
+        color: #2c3338;
+    }
+}
+
+.tourmix-dialog-actions-holder {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog-button {
+    padding:6px 12px;
+    margin-top: 25px;
+    border-radius: 15px;
+    border: 1px solid rgb(209, 213, 219);
+    background: none;
+    text-decoration: none;
+    color: inherit;
+    transition: scale 0.1s;
+
+    &:hover {
+        scale: 1.1; 
+    }
+}
+
+
+/*-----Information dialogs-----*/
+.information-dialog {
+    max-width: 300px !important;
+}
+
+.information-dialog-message {
+    text-align: justify !important;
+}
+
+.information-dialog-actions {
+    justify-content: space-between !important;
+}
+/*-----END-----*/
+
+/*-----Parcel label dialogs-----*/
+.parcel-label-dialog {
+    max-width: 320px !important;
+    //max-width: 500px !important;
+}
+
+.parcel-label-iframe {
+    width: auto;
+    height: 460px;
+}
+/*-----END-----*/
